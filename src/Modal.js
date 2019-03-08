@@ -13,7 +13,7 @@ class Modal extends React.Component {
       bottom: 0,
       left: 0,
       right: 0,
-      backgroundColor: 'rgba(0,0,0,0.3)',
+      backgroundColor: 'rgba(255, 23, 7, 0.3)',
       padding: 50
     };
 
@@ -29,13 +29,12 @@ class Modal extends React.Component {
     return (
       <div className="backdrop" style={backdropStyle}>
         <div className="modal" style={modalStyle}>
+          <button onClick={this.props.onClose}>X</button>
+          <br />
+          <br />
+          <br />   
           {this.props.children}
 
-          <div className="footer">
-            <button onClick={this.props.onClose}>          
-              Fechar modal
-            </button>
-          </div>
         </div>
       </div>
     );
